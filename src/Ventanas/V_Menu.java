@@ -23,11 +23,10 @@ import javax.swing.WindowConstants;
  */
 public class V_Menu extends JFrame{
     
-    private JLabel etiq1,etiq2,etiq3;
-    private JButton BtnAtras,BtnA,BtnE,BtnI,BtnO,BtnU;
+     JLabel label1,label2,label3;
+     JButton BtnAtras,BtnA,BtnE,BtnI,BtnO,BtnU;
     
-    public void menu(){
-        
+    public V_Menu(){
         BtnAtras = new JButton ();
         BtnA = new JButton ();
         BtnE = new JButton ();
@@ -35,70 +34,55 @@ public class V_Menu extends JFrame{
         BtnO = new JButton ();
         BtnU = new JButton ();
         
-        etiq1 = new JLabel ();
-        etiq2 = new JLabel ();
-        etiq3 = new JLabel (); 
-        
-        BtnAtras.setIcon(new ImageIcon(getClass().getResource("/Nombre de proyecto /nombre de la imgen"))); 
+        label1 = new JLabel ();
+        label2 = new JLabel ();
+        label3 = new JLabel ();
+    
+        BtnAtras.setIcon(new ImageIcon(getClass().getResource("/Imagenes_Acciones/Btn-Izq.png"))); 
         BtnAtras.setContentAreaFilled(false);
+        BtnAtras.setBounds(0,0,90,100);
         BtnAtras.setCursor(new Cursor(Cursor.HAND_CURSOR));
-        BtnAtras.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-             
-                //regresar a la ventana inicio
-            
-            }
-        });
-        
-        this.getContentPane().add(BtnAtras);
-        
-        BtnA.setIcon(new ImageIcon(getClass().getResource("/  /A.png"))); 
+        getContentPane().add(BtnAtras);
+        BtnAtras.setVisible(true);
+      
+        BtnA.setIcon(new ImageIcon(getClass().getResource("/Imagenes_Letras/A.png"))); 
         BtnA.setContentAreaFilled(false);
+        BtnA.setBounds(220,120,90,90);
         BtnA.setCursor(new Cursor(Cursor.HAND_CURSOR));
-        BtnA.addMouseListener(new MouseListener() {
-            @Override
-            public void mouseClicked(MouseEvent e) {
-                /*
-                
-                Audio de la letra A
-                
-                
-                */
-            }
-
-            @Override
-            public void mousePressed(MouseEvent e) {}
-
-            @Override
-            public void mouseReleased(MouseEvent e) {}
-
-            @Override
-            public void mouseEntered(MouseEvent e) { }
-
-            @Override
-            public void mouseExited(MouseEvent e) {}
-        });
+        getContentPane().add(BtnA);
+        BtnA.setVisible(true);
         
-        BtnA.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-            
-            //ventana de la letra A
-            
-            }
-        });
+        BtnE.setIcon(new ImageIcon(getClass().getResource("/Imagenes_Letras/E.png")));
+        BtnE.setCursor(new Cursor(Cursor.HAND_CURSOR));
+        BtnE.setContentAreaFilled(false);
+        BtnE.setBounds(410,130,80,80);
+        getContentPane().add(BtnI);
+        BtnI.setVisible(true);
+     
+        BtnO.setIcon(new ImageIcon(getClass().getClass().getResource("/Imagenes_Letras/O.png")));
+        BtnO.setCursor(new Cursor(Cursor.HAND_CURSOR));
+        BtnO.setBounds(200,300,100,90);
+        BtnO.setContentAreaFilled(false);
+        getContentPane().add(BtnO);
+        BtnO.setVisible(true);
+       
+        BtnU.setIcon(new ImageIcon(this.getClass().getClass().getResource("/Imagenes_Letras/U.png")));
+        BtnU.setCursor(new Cursor(Cursor.HAND_CURSOR));
+        BtnU.setContentAreaFilled(false);  
+        BtnU.setBounds(400,310,90,80);
+        getContentPane().add(BtnU);
+        BtnU.setVisible(true);
         
+        label1.setIcon(new ImageIcon(getClass().getClass().getResource("/Imagenes_Fondo/label-menu.jpg")));
+        label1.setBounds(0,0,510,440);
+        getContentPane().add(label1);
+        label1.setVisible(true);
         
-        
-        
-        
-        
+        label2.setIcon(new ImageIcon(getClass().getClass().getResource("/Imagenes_Animacion/POCOYO MENU.png")));
+        label2.setBounds(20,150,200,250);
+        getContentPane().add(label2);
+        label2.setVisible(true);
+       
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-}
-    
-    
-    
-    
-    
+        }
 }
